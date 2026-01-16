@@ -187,6 +187,15 @@ footer {
     font-size: 0.85rem;
 }
 
+footer .social-links {
+    margin-top: 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    gap: 1rem;
+    color:#FFFFFF;
+}
+
 /* ========================= MEDIA QUERIES ========================= */
 
 /* Tablets */
@@ -222,5 +231,98 @@ footer {
 
     .brand h1 {
         font-size: 1.6rem;
+    }
+}
+
+/* =========================
+   FOOTER – SOCIAL MEDIA
+========================= */
+.socialmedia {
+    background-color: #003796;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* =========================
+   BOTONES SOCIALES
+========================= */
+.social-links button {
+    background-color: #FFFFFF;
+    border: none;
+    border-radius: 50px;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Quitar estilos por defecto */
+.social-links button a {
+    text-decoration: none;
+    color: #003796;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+/* Iconos */
+.social-links button img {
+    width: 18px;
+    height: 18px;
+}
+
+/* =========================
+   COLORES ESPECÍFICOS
+========================= */
+
+/* GitHub */
+.social-links button:nth-child(1):hover {
+    background-color: #333333;
+}
+
+.social-links button:nth-child(1):hover a {
+    color: #FFFFFF;
+}
+
+/* LinkedIn */
+.social-links button:nth-child(2):hover {
+    background-color: #0A66C2;
+}
+
+.social-links button:nth-child(2):hover a {
+    color: #FFFFFF;
+}
+
+/* X (Twitter) */
+.social-links button:nth-child(3):hover {
+    background-color: #000000;
+}
+
+.social-links button:nth-child(3):hover a {
+    color: #FFFFFF;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 480px) {
+    .social-links {
+        justify-content: center;
+    }
+
+    .social-links button {
+        width: 100%;
+        justify-content: center;
     }
 }
